@@ -1,0 +1,19 @@
+version: '2'
+services:
+  db:
+    image: mysql
+    volumes:
+      - ./data/db:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: upzone
+      MYSQL_DATABASE: rpgtables
+      MYSQL_USER: upzone
+      MYSQL_PASSWORD: upzone
+  php:
+    build: php7-apache
+    volumes:
+      - ./code:/var/www/app
+#      - ./logs/app:/var/www/logs
+    ports:
+      - 80:80
+      - 9001:9001
