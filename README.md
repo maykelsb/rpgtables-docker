@@ -19,7 +19,7 @@ Containers used to dev the rpgtables project
    - ServerName: localdev
    - DocumentRoot: /var/www/app/public
  - xDebug
-   - port 9001;
+   - port: 9001;
    - idekey: XDEBUG
  - Composer;
  - mySQL
