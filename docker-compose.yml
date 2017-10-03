@@ -2,8 +2,9 @@ version: '2'
 services:
   db:
     image: mysql
+    user: "1000"
     volumes:
-      - ./data/db:/var/lib/mysql
+      - ./data:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: upzone
       MYSQL_DATABASE: rpgtables
@@ -13,7 +14,6 @@ services:
     build: php7-apache
     volumes:
       - ./code:/var/www/app
-#      - ./logs/app:/var/www/logs
     ports:
       - 80:80
       - 9001:9001
