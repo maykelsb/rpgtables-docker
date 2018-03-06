@@ -10,6 +10,10 @@ services:
       MYSQL_DATABASE: rpgtables
       MYSQL_USER: upzone
       MYSQL_PASSWORD: upzone
+    expose:
+      - '3306'
+    ports:
+      - 3306:3306
   php:
     build: php7-apache
     volumes:
