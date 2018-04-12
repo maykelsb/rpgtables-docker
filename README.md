@@ -3,9 +3,12 @@ Containers used to dev the rpgtables project
 
 # How to use
  - Unzip;
- - Create directory code, maps to /var/www/app;
- - Create directory data, maps to /var/lib/mysql;
+ - Create directory `code`, maps to /var/www/app;
+ - Create directory `data`, maps to /var/lib/mysql;
  - `chomod -R 0777 data`;
+ - If it is the first time
+   - `docker-compose build`
+ - After first build 
  - `docker-machine start rpgtables`;
  - `docker-machine env rpgtables`;
  - `eval $(domach env rpgtables)`;
