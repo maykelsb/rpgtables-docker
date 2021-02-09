@@ -7,14 +7,12 @@ Containers used to dev the rpgtables project
  - Create directory `data`, maps to /var/lib/mysql;
  - `chomod -R 0777 data`;
  - If it is the first time
-   - `docker-compose build`
- - After first build 
- - `docker-machine start rpgtables`;
- - `docker-machine env rpgtables`;
- - `eval $(domach env rpgtables)`;
- - Edit `docker-compose.yml` and set your values for `services.db.environment`;
- - `docker-compose build`;
- - `docker-compose up -d`;
+   - `docker-machine create rpgtables`
+   - `docker-machine start rpgtables`;
+   - `docker-machine env rpgtables`;
+   - `eval $(domach env rpgtables)`;
+   - `docker-compose build`;
+   - `docker-compose up -d`;
 
 # What is inside
  - Apache + PHP + PDO-MYSQL
