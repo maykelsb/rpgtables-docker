@@ -13,6 +13,10 @@ Containers used to dev the rpgtables project
    - `eval $(domach env rpgtables)`;
    - `docker-compose build`;
    - `docker-compose up -d`;
+ - Use this to enter apache container
+   - docker exec -it tables4dmsdocker_php_1 /bin/bash
+
+
 
 # What is inside
  - Apache + PHP + PDO-MYSQL
