@@ -24,7 +24,7 @@ RUN echo "display_errors = On" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebu
 RUN echo "xdebug.mode=debug" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
 RUN echo "xdebug.discover_client_host=1" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
 RUN echo "xdebug.idekey=\"XDEBUG\"" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
-RUN echo "xdebug.remote_port=9001" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
+RUN echo "xdebug.client_port=9001" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
 
 # Configurando vhost
 RUN echo "<VirtualHost *:80>" >> /etc/apache2/sites-available/app.conf
